@@ -9,7 +9,7 @@ public class VirtualPetTest {
     public void shouldReturnHungerLevelWhenWhenFeed() {
         VirtualPet underTest = new VirtualPet("kalu", 3, 3, 4);
         underTest.feedPet(1);
-        assertEquals(3, underTest.getHungerLevel());
+        assertEquals(2, underTest.getHungerLevel());
 
 
     }
@@ -24,8 +24,8 @@ public class VirtualPetTest {
     @Test
     public void shouldReturnBoredomLevelWhenPlayGame() {
         VirtualPet underTest = new VirtualPet("kalu", 4, 7, 1);
-        underTest.playGame(String.valueOf(1));
-        assertEquals(0, underTest.getBoredomLevel());
+        underTest.playGame();
+        assertEquals(1, underTest.getBoredomLevel());
 
 
     }

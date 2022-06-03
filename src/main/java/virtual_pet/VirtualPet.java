@@ -5,6 +5,7 @@ public class VirtualPet {
     private int hungerLevel;
     private int thristLevel;
     private int boredomLevel;
+    private int feed;
 
     public VirtualPet(String name, int hungerLevel, int thristLevel, int boredomLevel) {
         this.name = name;
@@ -45,13 +46,18 @@ public class VirtualPet {
 
 
     public void feedPet(int portionOfFood) {
+       hungerLevel-= portionOfFood;
+
+
     }
 
     public void drinkWater(int ozOfWater) {
+        thristLevel-= ozOfWater;
+
     }
 
-    public void playGame(String playSoccer) {
-        boredomLevel = 0;
+    public void playGame() {
+        boredomLevel = 1;
 
     }
     public void tick(){
@@ -59,17 +65,7 @@ public class VirtualPet {
         hungerLevel--;
         thristLevel--;
 
-
-
-
-
-
-
-
-
-
-
-
     }
+
 
 }

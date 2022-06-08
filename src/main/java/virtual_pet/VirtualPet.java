@@ -34,38 +34,39 @@ public class VirtualPet {
     public void setHungerLevel() {
         System.out.println();
     }
+
     public void greeting() {
         System.out.println("this VirtualPet's name is " + name + ",my hungerLevel is " +
-                hungerLevel + ",my thristLevel is "  + thristLevel + ", my boredomLevel is " + boredomLevel );
-
-    }
-    public void choose() {
-        System.out.println("what do you want to do");
+                hungerLevel + ",my thristLevel is " + thristLevel + ", my boredomLevel is " + boredomLevel);
 
     }
 
 
+
+    public void showStatus() {
+        System.out.println("Pet " + name + " has hunger = " + hungerLevel +
+                " thirst = " + thristLevel + " bored = " + boredomLevel);
+    }
     public void feedPet(int portionOfFood) {
-       hungerLevel-= portionOfFood;
-
-
+        hungerLevel -= portionOfFood;
     }
 
     public void drinkWater(int ozOfWater) {
-        thristLevel-= ozOfWater;
+        thristLevel -= ozOfWater;
 
     }
 
     public void playGame() {
         boredomLevel = 1;
-
     }
-    public void tick(){
+
+    public void tick() {
         boredomLevel--;
         hungerLevel--;
         thristLevel--;
 
     }
-
-
 }
+
+
+

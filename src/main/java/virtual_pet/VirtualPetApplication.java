@@ -14,7 +14,8 @@ public class VirtualPetApplication {
 
         while (pets.getHungerLevel() != 5 && pets.getThristLevel() != 5 && pets.getHungerLevel() != 5 && play){
 
-            pets.choose();
+            System.out.println("what do you want to do");
+            System.out.println("Feed = F, Water = W, Play Game = PG, exit = e");
             String choose = input.nextLine();
             choose = choose.toLowerCase();
             System.out.println();
@@ -36,7 +37,6 @@ public class VirtualPetApplication {
                 System.out.println("1 oz = -1 thrist level");
                 System.out.println("your thristLevel is " + pets.getThristLevel());
                 System.out.println("enter the oz of water to drink:");
-                String water = "w";
                 int ozOfWater = input.nextInt();
                 input.nextLine();
                 pets.drinkWater(ozOfWater);
@@ -44,10 +44,8 @@ public class VirtualPetApplication {
                 System.out.println("your current thristLevel is " + pets.getHungerLevel());
 
             } else if (choose.equals("pg")) {
-                System.out.println(" game = - boredom level");
+                System.out.println(" play game = Takes boredom level to 0");
                 System.out.println("your boredomLevel is " + pets.getBoredomLevel());
-                System.out.println(("enter pg to play game:"));
-                String playSoccer = input.nextLine();
                 pets.playGame();
                 System.out.println();
                 System.out.println("your current boredomLevel is " + pets.getHungerLevel());

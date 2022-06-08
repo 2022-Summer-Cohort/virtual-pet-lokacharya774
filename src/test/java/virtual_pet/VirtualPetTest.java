@@ -10,8 +10,6 @@ public class VirtualPetTest {
         VirtualPet underTest = new VirtualPet("kalu", 3, 3, 4);
         underTest.feedPet(1);
         assertEquals(2, underTest.getHungerLevel());
-
-
     }
 
     @Test

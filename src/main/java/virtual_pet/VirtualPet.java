@@ -41,8 +41,6 @@ public class VirtualPet {
 
     }
 
-
-
     public void showStatus() {
         System.out.println("Pet " + name + " has hunger = " + hungerLevel +
                 " thirst = " + thristLevel + " bored = " + boredomLevel);
@@ -61,9 +59,9 @@ public class VirtualPet {
     }
 
     public void tick() {
-        boredomLevel--;
-        hungerLevel--;
-        thristLevel--;
+        boredomLevel++;
+        hungerLevel++;
+        thristLevel++;
 
     }
 }

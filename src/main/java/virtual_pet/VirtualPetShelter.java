@@ -81,8 +81,8 @@ public class VirtualPetShelter {
 
     }
 
-    public void adoptPet(VirtualPet adoptPet) {
-        shelter.remove(adoptPet);
+    public void adoptPet(VirtualPet removePet) {
+        shelter.remove(removePet);
 
     }
 

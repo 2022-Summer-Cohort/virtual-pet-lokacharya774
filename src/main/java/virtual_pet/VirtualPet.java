@@ -2,10 +2,28 @@ package virtual_pet;
 
 public class VirtualPet {
     private String name;
+    private int health;
+    private int happiness;
     private int hungerLevel;
     private int thristLevel;
     private int boredomLevel;
+
     private int feed;
+
+
+        public VirtualPets(String name, int health, int happiness) {
+            this.name = name;
+            this.health = health;
+            this.happiness = happiness;
+        }
+
+        public int getHealth() {
+            return health;
+        }
+
+        public int getHappiness() {
+            return happiness;
+        }
 
     public VirtualPet(String name, int hungerLevel, int thristLevel, int boredomLevel) {
         this.name = name;
@@ -55,6 +73,7 @@ public class VirtualPet {
     }
 
     public void playGame() {
+
         boredomLevel = 1;
     }
 
@@ -64,6 +83,7 @@ public class VirtualPet {
         thristLevel++;
 
     }
+
 }
 
 

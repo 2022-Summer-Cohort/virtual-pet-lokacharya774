@@ -10,16 +10,16 @@ public class VirtualPetShelter {
 
     public VirtualPetShelter() {
         shelter = new ArrayList<>();
-        VirtualPet pet1 = new VirtualPet("kalu", 1, 3, 4);
-        VirtualPet pet2 = new VirtualPet("tommy", 3, 6, 2);
-        VirtualPet pet3 = new VirtualPet("rati", 4, 5, 3);
-        VirtualPet pet4 = new VirtualPet("sate", 3, 4, 2);
+        VirtualPet pet1 = new VirtualPet("kalu", 15, 13, 14);
+        VirtualPet pet2 = new VirtualPet("tommy", 17, 16, 12);
+        VirtualPet pet3 = new VirtualPet("rati", 14, 15, 13);
+        VirtualPet pet4 = new VirtualPet("sate", 16, 14, 18);
+        VirtualPet roboticsCat = new VirtualPet("abe,")
 
         shelter.add(pet1);
         shelter.add(pet2);
         shelter.add(pet3);
         shelter.add(pet4);
-
     }
 
     public int findSize() {
@@ -85,6 +85,8 @@ public class VirtualPetShelter {
         shelter.remove(removePet);
 
     }
+
+
 
 
 

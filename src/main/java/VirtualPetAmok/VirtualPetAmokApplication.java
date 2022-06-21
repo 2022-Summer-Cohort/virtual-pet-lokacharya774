@@ -1,10 +1,7 @@
 package VirtualPetAmok;
 
-import VirtualPet.VirtualPet;
-
 import java.util.Scanner;
-
-public class VirtualPetAmok {
+public class VirtualPetAmokApplication {
 
     public static void main(String[] args) {
 

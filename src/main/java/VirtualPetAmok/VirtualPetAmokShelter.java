@@ -1,7 +1,5 @@
 package VirtualPetAmok;
 
-import VirtualPet.VirtualPet;
-
 import java.util.ArrayList;
 
 public class VirtualPetAmokShelter {

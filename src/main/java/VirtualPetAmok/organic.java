@@ -1,7 +1,5 @@
 package VirtualPetAmok;
 
-import VirtualPet.VirtualPet;
-
 public abstract class organic extends VirtualPet {
 
     protected int cageCleanLevel;

@@ -1,7 +1,5 @@
 package VirtualPetAmok;
 
-import VirtualPet.VirtualPet;
-
 public abstract class robotics extends VirtualPet {
 
     protected int oilLevel;

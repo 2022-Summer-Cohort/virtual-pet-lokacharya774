@@ -1,4 +1,4 @@
-package VirtualPet;
+package VirtualPetAmok;
 
 public abstract class VirtualPet {
 

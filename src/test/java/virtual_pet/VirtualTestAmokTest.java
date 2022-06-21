@@ -1,7 +1,7 @@
-package VirtualPetAmokTest;
+package virtual_pet;
 
 
-import VirtualPet.VirtualPet;
+import VirtualPetAmok.VirtualPet;
 import VirtualPetAmok.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

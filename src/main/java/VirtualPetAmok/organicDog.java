@@ -1,17 +1,18 @@
 package VirtualPetAmok;
 
-public class organicCat extends organic implements play{
+public class organicDog extends organic implements Walking{
 
-    public organicCat(String name, int cageCleanLevel, int happinessLevel, int hungerLevel, int thirstLevel) {
+    public organicDog(String name, int cageCleanLevel, int happinessLevel, int hungerLevel, int thirstLevel) {
         super(name, cageCleanLevel, happinessLevel, hungerLevel, thirstLevel);
     }
 
-
     @Override
-    public void play() {
+    public void walking() {
         happinessLevel-=2;
         cageCleanLevel-=2;
         hungerLevel+=2;
         thirstLevel+=2;
     }
+
+
 }

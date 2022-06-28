@@ -8,10 +8,10 @@ public class VirtualPetAmokApplication {
         VirtualPetAmokShelter shelter = new VirtualPetAmokShelter();
         Scanner input = new Scanner(System.in);
 
-        VirtualPet cat1 = new organicCat("cat",10,10,10,10);
-        VirtualPet cat2 = new roboticCat("cat2",10,10,10);
-        VirtualPet dog1 = new organicDog("dog",10,10,10,10);
-        VirtualPet dog2 = new roboticDog("dog2",10,10,10);
+        VirtualPet cat1 = new organicCat("lucy",10,10,10,10);
+        VirtualPet cat2 = new roboticCat("luna",10,10,10);
+        VirtualPet dog1 = new organicDog("abe",10,10,10,10);
+        VirtualPet dog2 = new roboticDog("abby",10,10,10);
 
         shelter.admitToShelter(cat1);
         shelter.admitToShelter(cat2);
@@ -25,7 +25,7 @@ public class VirtualPetAmokApplication {
         String choose = "";
 
 
-        while (!choose.equals("e") && shelter.shelterSize()!=0) {
+        while (!choose.equals("e") && shelter.findSize()!=0) {
             System.out.println("What would you like to do? ");
             System.out.println("Give Oil (O): ");
             System.out.println("Give Maintenance (M): ");
@@ -35,6 +35,8 @@ public class VirtualPetAmokApplication {
             System.out.println("Walk all dogs (WD): ");
             System.out.println("Play all cats (PC): ");
             System.out.println("Exit the game: ");
+            System.out.println("adopt pet (a): ");
+            System.out.println("admit pet (b): ");
             choose = input.nextLine();
             choose = choose.toLowerCase();
             if (choose.equals("o")) {
@@ -73,6 +75,39 @@ public class VirtualPetAmokApplication {
                 shelter.playAllCats();
                 shelter.tickForAllOrganics();
                 shelter.tickForAllRobotics();
+
+            } else if (choose.equals("a")) {
+                System.out.println("which pet would you like to adopt ?");
+                for (int i = 0; i < shelter.findSize(); i++) {
+                    System.out.print(shelter.getOnePet(i).getName() + " ");
+                }
+                choose = input.nextLine();
+                choose = choose.toLowerCase();
+                shelter.adoptPet(shelter.getOnePetWithName(choose));
+                System.out.println();
+
+            }else if (choose.equals("b")) {
+                System.out.println("what is your pet name ?");
+                String newPetName = input.nextLine();
+
+                System.out.println("what is your pet hungerLevel ?");
+                int newPetHugerLevel = input.nextInt();
+                input.nextLine();
+
+                System.out.println("what is your pet thristLevel ?");
+                int newPetThristLevel = input.nextInt();
+                input.nextLine();
+
+                System.out.println("what is your pet boredomLevel ?");
+                int newPetBoredomLevel = input.nextInt();
+                input.nextLine();
+
+                VirtualPet admitPet = new organicDog(newPetName,5,5,5,5) {
+                };
+                shelter.admitPet(admitPet);
+                System.out.println();
+
+
             } else {
                 choose = "e";
             }

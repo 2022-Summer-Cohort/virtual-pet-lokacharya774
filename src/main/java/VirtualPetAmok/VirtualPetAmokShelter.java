@@ -133,9 +133,15 @@ public class VirtualPetAmokShelter {
             }
         }
     }
+    public void admitPet(VirtualPet addPet){
+        shelter.add(addPet);
+        }
+    public void adoptPet(VirtualPet removePet){
+        shelter.remove(removePet);
 
-    public int shelterSize() {
-        return shelter.size();
+
     }
-
+    public int findSize() {
+       return shelter.size();
+    }
 }
